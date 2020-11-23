@@ -7,6 +7,7 @@ modprobe -r vfio_iommu_type1
 modprobe -r vfio
   
 # Re-Bind GPU to Nvidia Driver
+# Replace with GPU ID
 virsh nodedev-reattach pci_0000_0c_00_1
 virsh nodedev-reattach pci_0000_0c_00_0
 
