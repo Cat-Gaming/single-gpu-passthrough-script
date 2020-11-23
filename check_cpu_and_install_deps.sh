@@ -5,6 +5,7 @@ if [[ grep -o 'vmx\|svm' /proc/cpuinfo ]]; then
   sudo apt install -y qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils libguestfs-tools genisoimage virtinst libosinfo-bin virt-manager
   sudo adduser $USER libvirt
   sudo adduser $USER libvirt-qemu
+  # assuming your using grub as your bootloader
   echo "Edit between the quotes at the end of the GRUB_CMDLINE_LINUX_DEFAULT: amd_iommu=on == amd and intel_iommu=on == intel"
 else
   echo "CPU not compatible!"
