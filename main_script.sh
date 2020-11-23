@@ -10,4 +10,7 @@ sudo ./setup_vfio_hooks.sh
 sudo cp start_vm.sh /etc/libvirt/hooks/qemu.d/prepare/begin/start.sh
 sudo cp revert_vm.sh /etc/libvirt/hooks/qemu.d/release/end/revert.sh
 
+# only for nvidia
+sudo cp NVIDIA_PATCHED.rom /usr/share/vgabios/NVIDIA_PATCHED.rom
+
 echo "Please Reboot."
